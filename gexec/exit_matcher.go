@@ -6,8 +6,7 @@ import (
 	"github.com/onsi/gomega/format"
 )
 
-/*
-The Exit matcher operates on a session:
+/* Exit: matcher operates on a session:
 
 	Expect(session).Should(Exit(<optional status code>))
 

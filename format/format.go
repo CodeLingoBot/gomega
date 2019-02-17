@@ -50,8 +50,7 @@ var Indent = "    "
 
 var longFormThreshold = 20
 
-/*
-Generates a formatted matcher success/failure message of the form:
+/* Message: Generates a formatted matcher success/failure message of the form:
 
 	Expected
 		<pretty printed actual>
@@ -146,8 +145,7 @@ const (
 	charactersAroundMismatchToInclude = 5
 )
 
-/*
-Pretty prints the passed in object at the passed in indentation level.
+/* Object: Pretty prints the passed in object at the passed in indentation level.
 
 Object recurses into deeply nested objects emitting pretty-printed representations of their components.
 

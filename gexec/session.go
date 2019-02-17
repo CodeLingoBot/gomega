@@ -217,8 +217,7 @@ func (s *Session) processIsAlive() bool {
 var trackedSessions = []*Session{}
 var trackedSessionsMutex = &sync.Mutex{}
 
-/*
-Kill sends a SIGKILL signal to all the processes started by Run, and waits for them to exit.
+/* KillAndWait: Kill sends a SIGKILL signal to all the processes started by Run, and waits for them to exit.
 The timeout specified is applied to each process killed.
 
 If any of the processes already exited, KillAndWait returns silently.
@@ -232,8 +231,7 @@ func KillAndWait(timeout ...interface{}) {
 	trackedSessions = []*Session{}
 }
 
-/*
-Kill sends a SIGTERM signal to all the processes started by Run, and waits for them to exit.
+/* TerminateAndWait: Kill sends a SIGTERM signal to all the processes started by Run, and waits for them to exit.
 The timeout specified is applied to each process killed.
 
 If any of the processes already exited, TerminateAndWait returns silently.

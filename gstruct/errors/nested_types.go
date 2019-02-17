@@ -28,7 +28,7 @@ func (e *NestedError) Error() string {
 	return fmt.Sprintf("%s:\n\t%v", e.Path, indented)
 }
 
-// Create a NestedError with the given path.
+// Nest: Create a NestedError with the given path.
 // If err is a NestedError, prepend the path to it.
 // If err is an AggregateError, recursively Nest each error.
 func Nest(path string, err error) error {

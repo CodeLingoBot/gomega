@@ -15,7 +15,7 @@ import (
 	"github.com/onsi/gomega/types"
 )
 
-//CombineHandler takes variadic list of handlers and produces one handler
+// CombineHandlers takes variadic list of handlers and produces one handler
 //that calls each handler in order.
 func CombineHandlers(handlers ...http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
